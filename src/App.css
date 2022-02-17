@@ -1,0 +1,26 @@
+#instructions {
+  display: flex;
+  justify-content: center;
+  margin-left: 78%;
+  border: 1px solid black;
+  background: white;
+  height: 100%;
+  width: 22%;
+  top: 0;
+  overflow: hidden;
+  position: fixed;
+}
+
+#scroll {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-top: 100px;
+  border: 1px solid black;
+  margin-left: 10px;
+  width: 72%;
+  height: 1000px;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
