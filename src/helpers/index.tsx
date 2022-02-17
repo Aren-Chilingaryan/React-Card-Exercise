@@ -1,13 +1,13 @@
-import { Card } from "./Interfaces";
+import { Card } from "./interfaces";
 
-export function createCard() {
+export function createCardData() {
   return {
-    id: GenerateUniqueId(),
-    innerNumber: GenerateRandomNumber(1, 50),
+    id: generateUniqueId(),
+    innerNumber: generateRandomNumber(1, 50),
   };
 }
 
-export function GenerateUniqueId() {
+export function generateUniqueId() {
   var dt = new Date().getTime();
   var uuid = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(
     /[xy]/g,
@@ -20,11 +20,11 @@ export function GenerateUniqueId() {
   return uuid;
 }
 
-export function GenerateRandomNumber(min: number, max: number) {
+export function generateRandomNumber(min: number, max: number) {
   return Math.floor(Math.random() * (max - min) + min);
 }
 
-export function sortObjectArray(array: Card[]) {
+export function sortCards(array: Card[]) {
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < array.length - 1; j++) {
       if (array[j].innerNumber > array[j + 1].innerNumber) {
